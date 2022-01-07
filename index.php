@@ -1,12 +1,13 @@
 <?php
+
 // Matriz com todos os numeros
 $numerosSorteados = array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 
 $quantidadeNumero = sizeof($numerosSorteados);
 // Informações adicionais
-$chances = round((1 / $quantidadeNumero) * 100);
-echo "- Temos no total <b>".$quantidadeNumero."</b> participantes; <br />";
-echo "- Cada participante teve <b>".$chances."%</b> de chance de ganhar; <br /><br />";
+$chances = round((2 / $quantidadeNumero) * 100);
+echo "- Temos no total <b>".$quantidadeNumero."</b> numeros <br />";
+echo "- Cada numero teve <b>".$chances."%</b> de chance de ser sorteado; <br /><br />";
 // Sorteando
 
 $sorteado[1] = $numerosSorteados[rand(0,$quantidadeNumero - 1)];
@@ -184,5 +185,8 @@ echo $sorteado[16] . ",";
 echo $sorteado[17] . ",";
 echo $sorteado[18] . ",";
 echo $sorteado[19] . ",";
-echo $sorteado[20] . ",";
+echo $sorteado[20] . "<br /><br />";
+
+
+echo "Para fazer um novo sorteio atualize a página.<br /><br />";
 ?>
